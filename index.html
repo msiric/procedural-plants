@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>L-Systems</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="header">  
+    <h1 id="heading">L-Systems procedural plant generation</h1>
+    <button id="toggle" type="button" onclick="toggleMenu()">Toggle menu</button>
+  </div>
+  <div class="container">
+    <div id="menu">
+    <form id="form">
+      <div class="row">
+        <p class="paragraph">Presets</p>
+        <input id="presets" type="range" min="0" max="0" value="2"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Iterations</p>
+        <input id="iterations" type="range" min="1" max="5" value="3"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Animation</p>
+        <input id="animation" type="checkbox"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Animation speed</p>
+        <input id="animation.speed" type="range" min="0" max="500" value="10"></input>
+      </div>
+      <div class="row">
+        <h2 class="paragraph">Leaves</h2>
+        <input id="leaf.color" class="color" type="color" name="body" value="#1c852b"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Length</p>
+        <input id="leaf.length" type="range" min="0.5" max="20.0" value="5.0"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Alpha</p>
+        <input id="leaf.alpha" type="range" min="0.01" max="1.0" value="0.75" step="0.01"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Width</p>
+        <input id="leaf.width" type="range" min="0.5" max="20.0" value="2.0"></input>
+      </div>
+      <div class="row">
+        <h2 class="paragraph">Branches</h2>
+        <input id="branch.color" class="color" type="color" name="body" value="#85521c"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Length</p>
+        <input id="branch.length" type="range" min="0.5" max="100.0" value="30.0"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Width</p>
+        <input id="branch.width" type="range" min="0.1" max="10.0" value="1.0" step="0.1"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Angle</p>
+        <input id="branch.angle" type="range" min="0.1" max="90.0" value="22.5" step="0.1"></input>
+      </div>
+      <div class="row">
+        <p class="paragraph">Falloff</p>
+        <input id="branch.falloff" type="range" min="0.1" max="1.0" value="0.75" step="0.01"></input>
+      </div>
+      <button id="submit">Apply</button>
+    </form>
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="./main.js">
+  </script>
+</body>
+</html>
