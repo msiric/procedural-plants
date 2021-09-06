@@ -1,6 +1,6 @@
 # L-systems Procedural Plant Generation
 
-Project made to play around with L-systems and present the plant generation process visually.
+Project made to play around with L-systems and provide a visual presentation of the plant generation process.
 
 You can generate different plants here: [Demo](https://zealous-morse-eef3b3.netlify.app/)
 
