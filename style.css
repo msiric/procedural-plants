@@ -1,4 +1,4 @@
-.header {
+#header {
   position: absolute;
   margin: 0 auto;
 }
@@ -64,6 +64,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: #ecdfc5;
 }
 
 body > div {
@@ -84,9 +85,11 @@ button {
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
   text-align: center;
   transition: all 0.2s;
-  background-color: rgb(40, 138, 7);
+  background-color: #1c852b;
   font-weight: bold;
   cursor: pointer;
+  border: 2px solid rgb(5, 107, 34);
+  z-index: 0;
 }
 
 button:hover {

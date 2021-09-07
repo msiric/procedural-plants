@@ -61,12 +61,16 @@ const PRESETS = [
   },
 ];
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  resetInterval();
+const applyChanges = () => {
   updateValues();
   applyRules();
   renderCanvas();
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  resetInterval();
+  applyChanges();
 };
 
 const resizeCanvas = () => {
@@ -86,6 +90,7 @@ const initializeApp = () => {
     .getAttribute("max");
   presets.setAttribute("max", PRESETS.length - 1);
   form.onsubmit = handleSubmit;
+  applyChanges();
 };
 
 const resetInterval = () => {
@@ -199,10 +204,12 @@ const renderCanvas = () => {
 
 const toggleMenu = (forceClose) => {
   const menu = document.getElementById("menu");
+  const header = document.getElementById("header");
   const canvas = document.getElementById("canvas");
   const changeState = (left = "-300px", action = "remove") => {
     menu.style.left = left;
     canvas.classList[action]("darken");
+    header.classList[action]("darken");
   };
 
   if (forceClose) {

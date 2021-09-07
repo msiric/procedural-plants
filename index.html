@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="header">  
+  <div id="header">  
     <h1 id="heading">L-systems procedural plant generation</h1>
     <button id="toggle" type="button" onclick="toggleMenu()">Toggle menu</button>
   </div>
@@ -20,15 +20,15 @@
       </div>
       <div class="row">
         <p class="paragraph">Iterations</p>
-        <input id="iterations" type="range" min="1" max="5" value="3"></input>
+        <input id="iterations" type="range" min="1" max="5" value="4"></input>
       </div>
       <div class="row">
         <p class="paragraph">Animation</p>
-        <input id="animation" type="checkbox"></input>
+        <input id="animation" type="checkbox" checked></input>
       </div>
       <div class="row">
         <p class="paragraph">Animation speed</p>
-        <input id="animation.speed" type="range" min="0" max="500" value="10"></input>
+        <input id="animation.speed" type="range" min="0" max="500" value="500"></input>
       </div>
       <div class="row">
         <h2 class="paragraph">Leaves</h2>
